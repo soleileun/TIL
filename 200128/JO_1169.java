@@ -1,7 +1,7 @@
 
 /**************************************************************
     Problem: 1169
-    User: raemong21
+    User: soleileun
     Language: Java
     Result: Success
     Time:381 ms
