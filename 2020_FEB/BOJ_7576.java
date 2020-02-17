@@ -1,6 +1,12 @@
+package date20200217;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class BOJ_7576 {
 	
@@ -21,19 +27,24 @@ public class BOJ_7576 {
 		
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-
-		Scanner sc = new Scanner(System.in);
-		int M = sc.nextInt();
-		int N = sc.nextInt();
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//		Scanner sc = new Scanner(System.in);
+	
+		StringTokenizer stk = new StringTokenizer(br.readLine());
+		
+		int M = Integer.parseInt(stk.nextToken());
+		int N = Integer.parseInt(stk.nextToken());
 		
 		board = new int[N][M];
 		Queue<Point> q = new LinkedList<>();
 		
 		for(int i=0;i<N;i++) {
+	
+			stk = new StringTokenizer(br.readLine());
 			for(int j=0;j<M;j++) {
-				board[i][j] = sc.nextInt();
+				board[i][j] = Integer.parseInt(stk.nextToken());
 				if(board[i][j] == 1) q.offer(new Point(i,j,1));	
 			}
 		}
