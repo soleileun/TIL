@@ -1,4 +1,4 @@
-package swea_prob;
+package date20200217;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -93,7 +93,6 @@ public class BOJ_17471 {
 			for(int i=0;i<map.get(tmp).size();i++) {
 				if(visit[map.get(tmp).get(i)] == false) {
 					//큐에 넣을때 other의 원소인지 확인하고 넣겠다는 것
-					//boolean c = false;
 					for(int k=0;k<other.length;k++) {
 						if(map.get(tmp).get(i) == other[k]) {
 							visit[map.get(tmp).get(i)] = true;
@@ -151,13 +150,12 @@ public class BOJ_17471 {
 	}
 	static void go(int idx ,int target, int before) {
 		if(idx == target) {
-//			System.out.println("선택 영역");
-			//print(arr);
-			//오름차순으로 뽑아버림
+
+			//0. 오름차순으로 뽑아버림
 			//1. 내가 뽑은 것들이 이어져있는지 확인해야됨 
+			//2. 그룹이 2개가 아니라면 return -1
+			//3. 그룹이 2개이고 이어져있다면 인구수 차이확인
 			int p = possible(arr);
-//			System.out.println("현재결과" + p);
-//			System.out.println("현재까지의 최소값" +min);
 
 		}else
 		{
@@ -170,7 +168,6 @@ public class BOJ_17471 {
 	
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		N = sc.nextInt();
 		people = new int[N];
@@ -195,7 +192,6 @@ public class BOJ_17471 {
 		
 		for(int i=1;i<=N;i++) {
 			arr = new int[i];
-			//System.out.println(i);
 			go(0, i,0);
 			
 		}
