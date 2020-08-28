@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class K¹øÂ°¼ö {
+public class KÂ¹Ã¸Ã‚Â°Â¼Ã¶ {
 public static void main(String[] args) {
 	int[] arr = {1,5,2,6,3,7,4};
 	int[][] cmd= {{2,5,3},{4,4,1},{1,7,3}};
